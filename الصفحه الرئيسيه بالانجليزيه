@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Elegant Touch - Accessories Shop</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #fff8f9;
+margin: 0;
+color: #333;
+}
+header {
+background-color: #ffc0cb;
+color: white;
+text-align: center;
+padding: 20px;
+position: relative;
+}
+nav {
+background-color: #fce4ec;
+padding: 10px;
+text-align: center;
+}
+nav a {
+margin: 0 10px;
+text-decoration: none;
+color: #c2185b;
+font-weight: bold;
+}
+.lang-switch {
+position: absolute;
+right: 20px;
+top: 20px;
+font-weight: bold;
+color: white;
+text-decoration: none;
+}
+.cart-info {
+background-color: #f1f1f1;
+padding: 10px;
+text-align: center;
+margin-top: 10px;
+}
+.products {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+padding: 20px;
+}
+.product {
+border: 1px solid #eee;
+border-radius: 10px;
+margin: 10px;
+padding: 15px;
+width: 250px;
+background-color: #fff;
+text-align: center;
+}
+.product img {
+width: 100%;
+height: auto;
+border-radius: 10px;
+}
+.btn {
+background-color: #e91e63;
+color: white;
+padding: 10px 15px;
+margin-top: 10px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-weight: bold;
+}
+footer {
+background-color: #ffc0cb;
+text-align: center;
+color: white;
+padding: 15px;
+margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<a class="lang-switch" href="index.html">العربية 🇸
