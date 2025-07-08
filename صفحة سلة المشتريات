@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>سلة المشتريات - لمسة أناقة</title>
+<style>
+body {
+font-family: Tahoma, sans-serif;
+background-color: #fff8f9;
+margin: 0;
+color: #333;
+direction: rtl;
+}
+header {
+background-color: #ffc0cb;
+color: white;
+text-align: center;
+padding: 20px;
+}
+nav {
+background-color: #fce4ec;
+padding: 10px;
+text-align: center;
+}
+nav a {
+margin: 0 10px;
+text-decoration: none;
+color: #c2185b;
+font-weight: bold;
+}
+table {
+width: 90%;
+margin: 20px auto;
+border-collapse: collapse;
+}
+th, td {
+border: 1px solid #c2185b;
+padding: 10px;
+text-align: center;
+}
+th {
+background-color: #fce4ec;
+}
+.btn-remove {
+background-color: #c2185b;
+color: white;
+border: none;
+padding: 5px 10px;
+cursor: pointer;
+border-radius: 5px;
+}
+.empty-message {
+text-align: center;
+margin: 30px;
+font-size: 1.2em;
+color: #666;
+}
+footer {
+background-color: #ffc0cb;
+text-align: center;
+color: white;
+padding: 15px;
+margin-top: 30px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>سلة المشتريات</h1>
+</header>
+
+<nav>
+<a href="index.html">الرئيسية</a>
+<a href="cart.html">سلة المشتريات</a>
+<a href="policy.html">سياسة التوصيل والاستبدال</a>
+</nav>
+
+<main>
+<table id="cart-table" style="display:none;">
+<thead>
+<tr>
+<th>اسم المنتج</th>
+<th>السعر (ريال)</th>
+<th>حذف</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<p class="empty-message" id="empty-msg">سلة المشتريات فارغة</p>
+</main>
+
+<footer>
+<p>&copy; 2025 متجر لمسة أناقة – جميع الحقوق محفوظة</p>
+</footer>
+
+<script>
+function loadCart() {
+const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+const table = document.getElementById('cart-table');
+const tbody = table.querySelector('tbody');
+const emptyMsg = document.getElementById('empty-msg');
+
+tbody.innerHTML = '';
+
+if(cart.length === 0) {
+table.style.display = 'none';
+emptyMsg.style.display = 'block';
+return;
+}
+
+table.style.display = 'table';
+emptyMsg.style.display = 'none';
+
+cart.forEach((item, index) => {
+const row = document.createElement('tr');
+
+const nameCell = document.createElement('td');
+nameCell.textContent = item.name;
+
+const priceCell = document.createElement('td');
+priceCell.textContent = item.price;
+
+const removeCell = document.createElement('td');
+const removeBtn = document.createElement('button');
+removeBtn.textContent = 'حذف';
+removeBtn.className = 'btn-remove';
+removeBtn.onclick = () => {
+cart.splice(index, 1);
+localStorage.setItem('cart', JSON.stringify(cart));
+loadCart();
+updateCartCount();
+};
+removeCell.appendChild(removeBtn);
+
+row.appendChild(nameCell);
+row.appendChild(priceCell);
+row.appendChild(removeCell);
+tbody.appendChild(row);
+});
+}
+
+function updateCartCount() {
+const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+localStorage.setItem('cartCount', cart.length);
+}
+
+loadCart();
+</script>
+
+</body>
+</html>
