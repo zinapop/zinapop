@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>سياسة التوصيل والاستبدال - لمسة أناقة</title>
+<style>
+body {
+font-family: Tahoma, sans-serif;
+background-color: #fff8f9;
+color: #333;
+line-height: 1.8;
+margin: 0;
+padding: 0;
+direction: rtl;
+}
+header {
+background-color: #ffc0cb;
+color: white;
+text-align: center;
+padding: 25px;
+}
+section {
+max-width: 800px;
+margin: auto;
+padding: 30px 20px;
+}
+h2 {
+color: #c2185b;
+margin-bottom: 15px;
+border-bottom: 2px solid #c2185b;
+display: inline-block;
+}
+ul {
+padding-right: 20px;
+}
+footer {
+background-color: #ffc0cb;
+color: white;
+text-align: center;
+padding: 15px;
+margin-top: 30px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>سياسة التوصيل والاستبدال</h1>
+</header>
+
+<section>
+<h2>التوصيل</h2>
+<ul>
+<li>نقوم بشحن الطلبات خلال 2-3 أيام عمل.</li>
+<li>التوصيل داخل المملكة العربية السعودية فقط.</li>
+<li>تتبع الشحنة متاح عبر رقم التتبع المرسل لك.</li>
+</ul>
+<h2>الاستبدال والاسترجاع</h2>
+<ul>
+<li>يمكنك استبدال أو استرجاع المنتج خلال 7 أيام من استلامه.</li>
+<li>يجب أن يكون المنتج بحالته الأصلية وغير مستخدم.</li>
+<li>لا يتم قبول الاستبدال أو الاسترجاع في حالة تلف المنتج بسبب الاستخدام الخاطئ.</li>
+</ul>
+<h2>الدعم</h2>
+<p>لأي استفسار يرجى التواصل معنا عبر رقم الواتساب الموجود في صفحة السلة.</p>
+</section>
+
+<footer>
+<p>&copy; 2025 متجر لمسة أناقة – جميع الحقوق محفوظة</p>
+</footer>
+
+</body>
+</html>
